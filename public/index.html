@@ -96,13 +96,12 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
 .hero-right {
   position: absolute;
   right: 80px;
-  bottom: 120px;
+  bottom: 116px;
   display: flex;
-  flex-direction: column;
   align-items: flex-end;
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 1.2s var(--ease) 1.8s, transform 1.2s var(--ease) 1.8s;
+  transform: translateY(10px);
+  transition: opacity 1.4s var(--ease) 1.6s, transform 1.4s var(--ease) 1.6s;
 }
 .hero-right.in {
   opacity: 1;
@@ -112,31 +111,31 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0;
+  gap: 10px;
 }
-.hero-right-label {
+.hero-right-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 300;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--pc);
-  opacity: 0.5;
-  margin-bottom: 10px;
+  opacity: 0.55;
 }
-.hero-right-sub {
-  font-size: 9px;
-  font-weight: 400;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: var(--sl);
-  margin-top: 10px;
-}
-.hero-right-rule {
-  width: 48px;
+.hero-right-divider {
+  width: 32px;
   height: 1px;
   background: var(--gd);
-  opacity: 0.3;
+  opacity: 0.4;
+  align-self: flex-end;
+}
+.hero-right-title {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--sl);
+  opacity: 0.7;
 }
  
 #nav {
@@ -261,12 +260,15 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
 /* ── HEADLINE — fixed three lines, no broken words ── */
 .hero-headline {
   margin-bottom: 48px;
+  padding-top: 8px;
 }
  
 .hero-line {
   display: block;
-  overflow: hidden;
+  overflow: visible;
   line-height: 0.95;
+  padding-top: 12px;
+  margin-top: -12px;
 }
  
 .hero-line-inner {
@@ -298,9 +300,9 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
 }
 .hero-desc.in { opacity: 1; transform: none; }
 .hero-desc p {
-  font-size: 19px;
-  line-height: 2.0;
-  color: rgba(245,243,238,0.72);
+  font-size: 21px;
+  line-height: 2.05;
+  color: rgba(245,243,238,0.75);
   font-weight: 300;
 }
  
@@ -389,10 +391,10 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
 .sec-title em { font-style: italic; color: var(--gd); font-weight: 300; }
  
 .sec-sub {
-  font-size: 16px;
-  line-height: 1.9;
-  color: var(--pc3);
-  max-width: 520px;
+  font-size: 19px;
+  line-height: 2.05;
+  color: rgba(245,243,238,0.54);
+  max-width: 600px;
 }
  
 /* ─────────────────────────────────────────
@@ -416,13 +418,13 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
 .about-body {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 36px;
 }
 .about-body p {
-  font-size: 17px;
-  line-height: 1.95;
-  color: rgba(245,243,238,0.75);
-  max-width: 640px;
+  font-size: 19px;
+  line-height: 2.05;
+  color: rgba(245,243,238,0.74);
+  max-width: 660px;
 }
 .about-body p strong {
   font-weight: 400;
@@ -519,8 +521,9 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
   padding: 48px 0;
   border-bottom: 1px solid var(--br2);
   align-items: start;
-  cursor: default;
+  cursor: pointer;
   position: relative;
+  transition: opacity 0.3s;
 }
 .dom:first-child { border-top: 1px solid var(--br2); }
  
@@ -559,14 +562,14 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
   transition: color 0.3s;
 }
 .dom-desc {
-  font-size: 14px;
-  line-height: 1.95;
-  color: rgba(245,243,238,0.46);
-  max-width: 600px;
+  font-size: 16px;
+  line-height: 2.0;
+  color: rgba(245,243,238,0.5);
+  max-width: 640px;
 }
 .dom-arrow {
-  opacity: 0;
-  transform: translateX(-10px);
+  opacity: 0.18;
+  transform: translateX(-4px);
   transition: opacity 0.35s, transform 0.4s var(--ease);
   color: var(--gd);
   padding-top: 8px;
@@ -638,10 +641,10 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
   font-weight: 300;
 }
 .pillar-d {
-  font-size: 16px;
-  line-height: 2.0;
-  color: rgba(245,243,238,0.52);
-  max-width: 640px;
+  font-size: 17px;
+  line-height: 2.05;
+  color: rgba(245,243,238,0.54);
+  max-width: 660px;
 }
  
 /* ─────────────────────────────────────────
@@ -696,11 +699,11 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
   align-items: start;
 }
 .contact-note {
-  font-size: 17px;
-  line-height: 2.0;
-  color: rgba(245,243,238,0.62);
-  max-width: 440px;
-  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 2.05;
+  color: rgba(245,243,238,0.65);
+  max-width: 460px;
+  margin-bottom: 36px;
 }
 .contact-note-b {
   font-size: 14px;
@@ -833,22 +836,32 @@ footer {
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo" aria-label="1440 Advisory">
-    <svg width="180" height="32" viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+    <svg width="260" height="48" viewBox="0 0 520 96" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
       <!-- Symbol: architectural A -->
-      <rect x="0" y="10" width="7" height="44" rx="1.5" fill="#F5F3EE" opacity="0.92"/>
-      <rect x="33" y="10" width="7" height="44" rx="1.5" fill="#F5F3EE" opacity="0.92"/>
-      <rect x="0" y="32" width="40" height="1.5" rx="0.75" fill="#C4A96A"/>
-      <path d="M7 10 L20 3 L33 10" stroke="#F5F3EE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.92"/>
+      <rect x="0" y="10" width="10" height="66" rx="2" fill="#F5F3EE" opacity="0.92"/>
+      <rect x="46" y="10" width="10" height="66" rx="2" fill="#F5F3EE" opacity="0.92"/>
+      <rect x="0" y="46" width="56" height="2" rx="1" fill="#C4A96A"/>
+      <path d="M10 10 L28 2 L46 10" stroke="#F5F3EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.92"/>
       <!-- Vertical gold divider -->
-      <rect x="54" y="10" width="1" height="44" rx="0.5" fill="#C4A96A" opacity="0.3"/>
-      <!-- Wordmark -->
-      <text x="68" y="40"
+      <rect x="78" y="12" width="1" height="62" rx="0.5" fill="#C4A96A" opacity="0.28"/>
+      <!-- Wordmark stacked: 1440 large -->
+      <text x="98" y="46"
         font-family="'Cormorant Garamond', Georgia, serif"
-        font-size="26"
-        font-weight="400"
-        letter-spacing="2"
+        font-size="40"
+        font-weight="300"
+        letter-spacing="1"
         fill="#F5F3EE"
-        opacity="0.95">1440 Advisory</text>
+        opacity="0.95">1440</text>
+      <!-- Gold rule under 1440 -->
+      <rect x="98" y="54" width="148" height="1" fill="#C4A96A" opacity="0.6"/>
+      <!-- ADVISORY small wide tracking -->
+      <text x="99" y="72"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="10"
+        font-weight="400"
+        letter-spacing="6"
+        fill="#F5F3EE"
+        opacity="0.55">ADVISORY</text>
     </svg>
   </a>
   <nav class="nav-links">
@@ -886,14 +899,12 @@ footer {
     </div>
   </div>
  
-  <!-- Hero right architectural element -->
+  <!-- Hero right architectural element — refined -->
   <div class="hero-right" id="hero-right">
     <div class="hero-right-inner">
-      <div class="hero-right-label">Nathan Nox</div>
-      <div class="hero-right-rule"></div>
-      <div class="hero-right-sub">Human Stabilization Architect</div>
-      <div class="hero-right-rule" style="margin-top:20px;"></div>
-      <div class="hero-right-sub" style="margin-top:16px; color: var(--gd); opacity:0.6; letter-spacing:0.28em;">1440 Advisory</div>
+      <div class="hero-right-name">Nathan Nox</div>
+      <div class="hero-right-divider"></div>
+      <div class="hero-right-title">Human Stabilization Architect</div>
     </div>
   </div>
  
@@ -1161,6 +1172,16 @@ document.addEventListener('mousemove', e => { cx = e.clientX; cy = e.clientY })
   ring.style.left = rx + 'px'; ring.style.top = ry + 'px'
   requestAnimationFrame(loop)
 })()
+ 
+// Domain click — ready for individual pages when built
+document.querySelectorAll('.dom').forEach(el => {
+  el.addEventListener('click', () => {
+    // Future: route to individual domain page
+    // For now scroll to contact as CTA
+    const contact = document.getElementById('contact')
+    if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  })
+})
  
 document.querySelectorAll('a, .dom, .stat').forEach(el => {
   el.addEventListener('mouseenter', () => document.body.classList.add('hov'))

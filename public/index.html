@@ -259,7 +259,7 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
  
 /* ── HEADLINE — fixed three lines, no broken words ── */
 .hero-headline {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
   padding-top: 8px;
 }
  
@@ -293,17 +293,18 @@ body.hov #cursor-ring { width: 52px; height: 52px; border-color: rgba(196,169,10
  
 /* Descriptor */
 .hero-desc {
-  max-width: 560px;
+  max-width: 720px;
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.9s var(--ease) 1.2s, transform 0.9s var(--ease) 1.2s;
 }
 .hero-desc.in { opacity: 1; transform: none; }
 .hero-desc p {
-  font-size: 21px;
-  line-height: 2.05;
-  color: rgba(245,243,238,0.75);
+  font-size: 26px;
+  line-height: 1.75;
+  color: rgba(245,243,238,0.82);
   font-weight: 300;
+  letter-spacing: -0.01em;
 }
  
 /* Scroll indicator */

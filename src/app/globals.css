@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --off-black: #1A1814;
+  --off-white: #F7F5F0;
+  --slate: #8A9BA8;
+  --warm-gray: #6B6860;
+  --mist: #D4CFC6;
+}
+
+@theme inline {
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-dm-sans);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  background: #F7F5F0;
+  color: #1A1814;
+}
+
+/* Nav links */
+.nav-link {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #6B6860;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #1A1814;
+}
+
+/* Primary CTA — dark filled */
+.btn-primary {
+  display: inline-block;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #F7F5F0;
+  background: #1A1814;
+  padding: 16px 32px;
+  border-radius: 0;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.btn-primary:hover {
+  opacity: 0.82;
+}
+
+/* Secondary CTA — ghost */
+.btn-ghost {
+  display: inline-block;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #F7F5F0;
+  background: transparent;
+  border: 1px solid #F7F5F0;
+  padding: 16px 32px;
+  border-radius: 0;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-ghost:hover {
+  background: #F7F5F0;
+  color: #1A1814;
+}
+
+/* Footer links */
+.footer-link {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  color: rgba(247, 245, 240, 0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  color: rgba(247, 245, 240, 0.72);
+}
